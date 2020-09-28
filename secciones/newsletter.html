@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+
+
+<title>Formulario</title>
+    
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<header class="header">
+            
+  <nav class="header__nav">  
+      <div class= "header__logo">
+          <a href="../index.html"> Yamaní</a>
+      </div>
+  <ul class="header__ul">
+      <li class="header__li">
+          <a href="alimentos.html" class="header__a">Alimentos</a>
+      </li>
+
+      <li class="header__li">
+      <a  href="cuidadopersonal.html" class="header__a"> Cuidado Personal </a>
+      </li>
+
+      <li class="header__li">
+      <a href="medicinanatural.html" class="header__a">Medicina Natural</a>
+      </li> 
+
+      <li class="header__li">
+          <a href="blog.html" class="header__a">Blog</a>
+      </li>
+
+</ul>
+</nav>
+
+</header>
+        <div class="container">
+            <div class="tituloform">
+            <h1>Completa nuestro formulario y enterate de todas las ofertas y novedades que Yamaní tiene para vos!</h1>
+        </div>
+        </div>
+
+
+
+        <form class="container"> 
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre y Apellido</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Correo Electrónico</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  País
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Argentina</a>
+                  <a class="dropdown-item" href="#">Brasil</a>
+                  <a class="dropdown-item" href="#">Uruguay</a>
+                  <a class="dropdown-item" href="#">Paraguay</a>
+                  <a class="dropdown-item" href="#">Bolivia</a>
+                  <a class="dropdown-item" href="#">Colombia</a>
+                  <a class="dropdown-item" href="#">Venezuela</a>
+                  <a class="dropdown-item" href="#">Otro</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tipo de Alimentación
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Vegetariano</a>
+                  <a class="dropdown-item" href="#">Vegano</a>
+                  <a class="dropdown-item" href="#">Omnívoro</a>
+                  <a class="dropdown-item" href="#">Otro</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tipo de Alimentación
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Eventos</a>
+                  <a class="dropdown-item" href="#">Seminarios/a>
+                  <a class="dropdown-item" href="#">Ofertas</a>
+                  <a class="dropdown-item" href="#">Tendencias</a>
+                  <a class="dropdown-item" href="#">Articulos</a>
+                  <a class="dropdown-item" href="#">Otro</a>
+
+                </div>
+              </div>
+                 <div id="botonsubmit">
+                     <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+        </form>
+
+
+    </header>
+    
+</body>
+</html>

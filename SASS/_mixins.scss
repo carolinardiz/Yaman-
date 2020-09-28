@@ -1,0 +1,14 @@
+@mixin flex ($flexdirection) {
+    display: flex;
+    flex-direction: $flexdirection;
+}
+
+@mixin font ($size,$weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin size ($width,$height) {
+    width: $width;
+    height: $height;
+}

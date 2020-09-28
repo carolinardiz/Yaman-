@@ -1,0 +1,461 @@
+@import "variables";
+@import "mixins";
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  justify-content: center;
+  background-color: $beige;
+  width: 100vw;
+
+  .header__logo {
+    a {
+      @include flex(column);
+      justify-content: center;
+      width: small;
+      height: small;
+      position: relative;
+      @include font(large, 500);
+      text-align: center;
+      padding: 50px 20px 50px 20px;
+      background-image: url(../img/logo.png);
+      background-position: center;
+      background-size: 85px 85px;
+      background-repeat: no-repeat;
+      color: $blanco;
+    }
+  }
+
+  .header__nav {
+    @include flex(row);
+    justify-content: center;
+  }
+
+  .header__li {
+    display: inline-block;
+    padding: 60px 20px 20px 20px;
+  }
+
+  .header__a {
+    color: $grisoscuro;
+    font-size: large;
+    font-weight: 400;
+    padding: 0;
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+}
+
+
+
+/** hasta acá el header**/
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+
+  .contenedor__superalimentos {
+    @include flex(column);
+    @include size(100vw, 60vh);
+    justify-content: center;
+    margin: 2em 2em 2em 2em;
+    overflow: hidden;
+    text-align: left;
+    background: url(../img/superalimentos.png);
+    background-repeat: no-repeat no-repeat;
+    background: cover;
+    border: white 20px solid;
+
+    .contenedor__linksuperal {
+      color: white;
+      font-weight: 900;
+      font-size: xx-large;
+      padding: 1cm 1cm 1cm 1cm;
+      margin: 1cm 1cm 1cm 1cm;
+    }
+  }
+
+  .contenedor__shampoo {
+    @extend .contenedor__superalimentos;
+    background: url(../img/shampoo.png);
+    text-align: right;
+
+    .contenedor__linkshampoo {
+      @include font(xx-large, 900);
+      padding: 1cm 1cm 1cm 1cm;
+      color: $negroclaro;
+    }
+  }
+}
+
+.news {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+
+  .news__a {
+    color: $grisoscuro;
+    font-size: x-large;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.contacto {
+  text-align: center;
+  background-color: $beige;
+  width: 100vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  .contacto__h2 {
+    padding: 10px;
+    color: $verdeoscuro;
+  }
+
+  .contacto__ul {
+    list-style: none;
+    list-style-type: none;
+    word-spacing: 100px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .contacto__li {
+    color: $verdeoscuro;
+    font-size: large;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .contacto__li {
+    word-spacing: 0;
+    padding: 5px;
+  }
+}
+
+.media {
+  list-style: none;
+  font-size: large;
+  text-decoration: none;
+  text-align: center;
+  word-spacing: 100px;
+  width: 100vw;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1cm;
+  }
+
+  a {
+    color: $naranja;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/**Alimentos**/
+
+.wpp {
+  @include font(x-large, 700);
+  color: $naranja;
+  width: 97vw;
+  text-align: right;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  padding: 25px;
+  margin-top: 1cm;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  margin-left: 6cm;
+  margin-top: 1cm;
+  margin-bottom: 4cm;
+  width: 80vw;
+
+  h1 {
+    font-size: large;
+    color: $blanco;
+    font-size: 900;
+    border-color: white;
+    text-align: center;
+    margin-bottom: 0.5cm;
+  }
+  article {
+    padding: 20px;
+    margin: 0.5cm;
+    background-image: url(../img/legumbres.png);
+    background-position: right;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    @include font(medium, 700);
+    color: $blanco;
+    margin: 0.1cm;
+  }
+
+  .legumbres {
+    border: 5px white solid;
+    background-color: $grisclaro;
+  }
+
+  .harinas {
+    background-image: url(../img/harinas.png);
+    background-position: right;
+  }
+
+  .arroz {
+    background-image: url(../img/arroz.png);
+    background-position: center;
+  }
+
+  .frutos {
+    background-image: url(../img/frutossecos.png);
+    background-position: right;
+  }
+
+  .cereales {
+    background-image: url(../img/cereales.png);
+    background-position: right;
+  }
+
+  .condimentos {
+    background-image: url(../img/condimentos.png);
+    background-position: center;
+  }
+
+  .congelados {
+    background-image: url(../img/congelados.png);
+    background-position: right;
+  }
+
+  .bebibles {
+    background-image: url(../img/lacteos.png);
+    background-position: right;
+  }
+
+  .galletitas {
+    background-image: url(../img/galletitas.png);
+    background-position: center;
+  }
+}
+
+.intro {
+  li {
+    font-size: 600;
+    margin: 20px 20px 20px 20px;
+    width: 100vw;
+    padding-left: 20px 20px 20px 20px;
+  }
+}
+
+/*Cuidado Personal*/
+
+.grillacp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 2cm;
+  margin-right: 3cm;
+  margin-bottom: 3cm;
+
+  article {
+    border: 0.5cm #f2e9e4 solid;
+    margin: 1cm;
+    width: 40vw;
+    height: 600px;
+    text-align: center;
+  }
+
+  h1 {
+    @include font(xx-large, 700);
+    font-style: bold;
+    color: $blanco;
+    padding-top: 80px;
+  }
+
+  ul {
+    padding-top: 40px;
+  }
+
+  li {
+    @include font(x-large, 700);
+    padding: 10px;
+    color: $blanco;
+  }
+}
+
+#cremas {
+  background-image: url(../img/cremas.png);
+  background-position: bottom right;
+}
+
+#capilar {
+  background-image: url(../img/shampoo.png);
+  background-position: center right;
+}
+
+ul {
+  .listasul {
+    margin-bottom: 2em;
+  }
+}
+
+/** Medicina Natural**/
+
+.mednat {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1cm;
+
+  h2 {
+    margin-top: 1cm;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    background-color: #eaf4f4;
+    background-size: 100px;
+    background-position: center;
+    text-align: center;
+    font-size: large;
+    color: $verdeclaro;
+  }
+
+  article {
+    margin-top: 1cm;
+    padding: 0.5cm;
+    background-color: #f8f9fa;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    padding: 1cm;
+    margin-left: 2cm;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    margin: 1cm;
+    background-color: $grisclaro;
+    color: $grisoscuro;
+    width: 9cm;
+  }
+}
+
+/**Blog**/
+
+#intro h1 {
+  font-size: x-large;
+  font-weight: 700;
+  color: $verdeclaro;
+  margin: 1cm;
+}
+
+.grillablog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  article {
+    border: 0.5cm white solid;
+    background-color: $grisclaro;
+    transition: width 0s;
+
+    h2 {
+      padding: 20px;
+      color: $verdeoscuro;
+      font-weight: 400;
+    }
+
+    :hover {
+      width: 80vw;
+    }
+
+    h3 {
+      padding: 20px;
+      color: $grisoscuro;
+      font-size: large;
+      font-weight: 700;
+    }
+
+    p {
+      padding: 20px;
+      color: $grisoscuro;
+      font-weight: 400;
+ 
+    img {
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      margin-top: 2cm;
+      margin-left: 50px;
+      transition: 0s;
+    
+      :hover {
+        width:400px;
+      }
+
+    }
+    }
+    }
+    a{
+      padding: 20px;
+      color: $grisoscuro;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+
+
+/** Newsletter**/
+
+.container {
+  .tituloform {
+    padding: 1cm;
+    color: $grisoscuro;
+  }
+
+  .form-group {
+    padding: 0.5cm;
+  }
+
+  .dropdown {
+    padding: 0.5cm;
+  }
+
+  #botonsubmit {
+    padding-left: 15cm;
+    padding-top: 1cm;
+  }
+}
+
