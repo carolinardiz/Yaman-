@@ -22,6 +22,7 @@ a {
 .header {
   justify-content: center;
   background-color: $beige;
+  background-position: cover;
   width: 100vw;
 
   .header__logo {
@@ -74,12 +75,13 @@ a {
     @include flex(column);
     @include size(100vw, 60vh);
     justify-content: center;
-    margin: 2em 2em 2em 2em;
+    margin: 4em 2em 2em 5em;
     overflow: hidden;
     text-align: left;
     background: url(../img/superalimentos.png);
+    background-size: 90vw;
+    background-position-y: center;
     background-repeat: no-repeat no-repeat;
-    background: cover;
     border: white 20px solid;
 
     .contenedor__linksuperal {
@@ -92,14 +94,18 @@ a {
   }
 
   .contenedor__shampoo {
-    @extend .contenedor__superalimentos;
-    background: url(../img/shampoo.png);
+    background: url(../img/shampoosolido.png);
+    background-position-y: center;
     text-align: right;
+    @extend .contenedor__superalimentos;
+    margin-top: 1em;
+    background-size: 90vw;
+    background-repeat: no-repeat no-repeat;
 
     .contenedor__linkshampoo {
       @include font(xx-large, 900);
-      padding: 1cm 1cm 1cm 1cm;
-      color: $negroclaro;
+      padding: 1cm 4cm 1cm 1cm;
+      color: $blanco;
     }
   }
 }
@@ -116,22 +122,28 @@ a {
     font-size: x-large;
     text-align: center;
     text-decoration: none;
+    margin-bottom: 1cm;
   }
 }
 
 .contacto {
-  text-align: center;
+  @include flex (column);
+  justify-content: center;
   background-color: $beige;
   width: 100vw;
   margin-top: 2em;
   margin-bottom: 2em;
 
   .contacto__h2 {
+    @include flex (row);
+    justify-content: center;
     padding: 10px;
     color: $verdeoscuro;
   }
 
   .contacto__ul {
+    @include flex (column);
+    justify-content: center;
     list-style: none;
     list-style-type: none;
     word-spacing: 100px;
@@ -224,11 +236,15 @@ a {
   .legumbres {
     border: 5px white solid;
     background-color: $grisclaro;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
   }
 
   .harinas {
     background-image: url(../img/harinas.png);
     background-position: right;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
   }
 
   .arroz {
@@ -243,7 +259,9 @@ a {
 
   .cereales {
     background-image: url(../img/cereales.png);
-    background-position: right;
+    background-position: center;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
   }
 
   .condimentos {
@@ -313,12 +331,14 @@ a {
 
 #cremas {
   background-image: url(../img/cremas.png);
-  background-position: bottom right;
+  background-position: center;
+  background-repeat: no-repeat no-repeat;
+  
 }
 
 #capilar {
-  background-image: url(../img/shampoo.png);
-  background-position: center right;
+  background-image: url(../img/shampoosolido.png);
+  background-position: center;
 }
 
 ul {
