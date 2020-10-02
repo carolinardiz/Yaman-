@@ -51,6 +51,11 @@ a {
   .header__li {
     display: inline-block;
     padding: 60px 20px 20px 20px;
+    transition: color 0s;
+
+    :hover{
+      color: $verdeclaro;
+    }
   }
 
   .header__a {
@@ -60,6 +65,7 @@ a {
     padding: 0;
     text-align: center;
     padding: 50px 20px 20px;
+
   }
 }
 
