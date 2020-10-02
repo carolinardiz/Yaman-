@@ -403,7 +403,7 @@ ul {
 }
 
 .grillablog {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
 
   article {
@@ -411,14 +411,14 @@ ul {
     background-color: $grisclaro;
     transition: width 0s;
 
+    :hover {
+      width: 80vw;
+    }
+
     h2 {
       padding: 20px;
       color: $verdeoscuro;
       font-weight: 400;
-    }
-
-    :hover {
-      width: 80vw;
     }
 
     h3 {
